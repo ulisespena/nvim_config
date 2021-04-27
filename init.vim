@@ -30,9 +30,11 @@ set termguicolors
 let ayucolor="mirage"
 colorscheme gruvbox
 
-" Custom keybindings
+" Custom keybindings:
+"" navigate between empty lines
 nmap <C-Up> {
 nmap <C-Down> }
 vmap <C-Up> {
 vmap <C-Down> }
-
+imap <C-Up> <C-o>{
+imap <C-Down> <C-o>}
