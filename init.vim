@@ -28,7 +28,7 @@ let g:airline_powerline_fonts = 1
 " Enable truecolor and set colorscheme
 set termguicolors
 let ayucolor="mirage"
-colorscheme gruvbox
+colorscheme ayu
 
 " Custom keybindings:
 "" navigate between empty lines
@@ -38,3 +38,11 @@ vmap <C-Up> {
 vmap <C-Down> }
 imap <C-Up> <C-o>{
 imap <C-Down> <C-o>}
+
+"" drag lines
+nnoremap <A-Down> :m .+1<CR>==
+nnoremap <A-Up> :m .-2<CR>==
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
